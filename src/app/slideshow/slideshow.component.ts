@@ -23,7 +23,7 @@ export class SlideshowComponent {
   updateImage() {
     setInterval(() => {
       this.currentImage++;
-      this.currentImage = this.currentImage & this.images.length;
+      this.currentImage = this.currentImage % this.images.length;
       this.showImage = false;
       setTimeout(() => {
         this.showImage = true;
